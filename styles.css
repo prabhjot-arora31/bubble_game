@@ -11,14 +11,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 25px;
+  flex-direction: column;
   overflow: hidden;
   background-color: red;
 }
+.instructions {
+  border: 1px solid black;
+  padding: 20px;
+  padding-left: 30px;
+}
 .inner {
   width: 80vw;
+  overflow: hidden;
   height: 80vh;
   border-radius: 29px;
-  overflow: hidden;
   background-color: white;
 }
 .top {
