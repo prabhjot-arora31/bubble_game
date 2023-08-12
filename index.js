@@ -4,6 +4,7 @@ var score = 0;
 document.getElementById("score").textContent = "Score: " + score;
 document.getElementById("hit").textContent = "Hit: " + hit;
 document.getElementById("hit").style.display = "none";
+document.querySelector(".instructions").style.overflowY = "scroll";
 // decrease timer ***********************************************************
 function timer() {
   time--;
