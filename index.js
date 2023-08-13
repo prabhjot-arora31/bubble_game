@@ -12,12 +12,15 @@ function timer() {
 }
 // *****************************************************************************
 document.getElementById("timer").textContent = "Timer:" + 60;
+document.getElementById('timer').style.display='none';
 function startTimer() {
   const myInterval = setInterval(() => {
     if (time > 0)
       document.getElementById("timer").textContent = "Timer:" + timer();
     else {
       stopGame();
+      document.getElementById('hit').style.display = 'none';
+      clearInterval(myInterval);
     }
   }, 1000);
 }
@@ -43,6 +46,7 @@ function createBubbles() {
 }
 
 document.getElementById("btn").addEventListener("click", () => {
+  document.getElementById('timer').style.display='block';
   document.getElementById("hit").style.display = "block";
   document.getElementById("btn").style.display = "none";
   document.querySelector(".bubbles").style.display = "flex";
