@@ -15,6 +15,8 @@ document.getElementById("timer").textContent = "Timer:" + 60;
 document.getElementById('timer').style.display='none';
 function startTimer() {
   const myInterval = setInterval(() => {
+    if(time<=10)
+      document.getElementById('timer').style.color = 'red';
     if (time > 0)
       document.getElementById("timer").textContent = "Timer:" + timer();
     else {
